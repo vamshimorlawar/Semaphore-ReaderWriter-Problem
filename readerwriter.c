@@ -35,7 +35,7 @@ void *writer(void *arg)
 	f=((int)arg);
 	sem_wait(&writeb);
 	data++;
-	printf("The data read by the writer %d is %d \n",f,data);
+	printf("The data written by the writer %d is %d \n",f,data);
 	sem_post(&writeb);
 	
 }
